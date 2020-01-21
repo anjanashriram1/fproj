@@ -1,11 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-int a = 95.904;
-int b = 100.086;
-int c = 60.052;
-int d = 62.005;
-int e = 17.008;
-
+#include <stdlib.h>
 //float atomicmass(float hatom, int numberh, char polyion, int numberion)
 //{
 //	float mass;
@@ -19,24 +14,38 @@ int main(int argc, char* argv[])
 {
 if (argc != 3)
 {
-	printf("%s: Please input 4 values\n", argv[0]);
+	printf("%s: Please input 2 values\n", argv[0]);
 }
 
 else if (argc == 3)
 {
+float a = 60.05;
+float b = 127.9;
+float c = 83.45;
 char input[256];
 char polyion;
 int numberion;
 char answer;
-int number;
+float number;
 float mass;
-	answer = sscanf(input, "%s", polyion);
-	number = sscanf(input, "%d", numberion);
+	answer = *argv[1];
+	number = atof(argv[2]);
 	if(answer == 'a')
 {
 	mass = a * number;
 }
+	else if(answer == 'b')
+{
+	mass = b * number;
+}
+	else if(answer == 'c')
+{
+	mass = c * number;
+}
 printf("The mass is %f\n", mass);
+
+
+
 }
 }
 
