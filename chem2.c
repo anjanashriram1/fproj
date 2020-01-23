@@ -14,9 +14,7 @@ else if (argc == 4)
 float a = 60.05;
 float b = 127.9;
 float c = 83.45;
-char input[256];
 char answer;
-float number;
 float mass;
 int lowerrange;
 int upperrange;
